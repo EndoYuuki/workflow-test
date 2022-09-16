@@ -7,7 +7,7 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 # poetry
-ENV POETRY_HOME=/etc/poetry
+ENV POETRY_HOME /etc/poetry
 RUN curl -sSL https://install.python-poetry.org | python3 - --preview --version 1.2.0b3
 
-ENV PATH=/etc/poetry/bin:${PATH}
+ENV PATH /etc/poetry/bin:$PATH
