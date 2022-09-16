@@ -10,4 +10,4 @@ RUN apt-get update -y \
 ENV POETRY_HOME=/etc/poetry
 RUN curl -sSL https://install.python-poetry.org | python3 - --preview --version 1.2.0b3
 
-ENV PATH /etc/poetry/bin:${PATH}
+ENV PATH=/etc/poetry/bin:${PATH}
