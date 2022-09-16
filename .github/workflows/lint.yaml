@@ -48,4 +48,4 @@ jobs:
       -
         name: Run
         run: |
-          echo "Hello World"
+          docker-compose exec bach -c "echo Hello"
