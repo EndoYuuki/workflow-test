@@ -27,7 +27,6 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: .docker
-          target: base
           push: false
           tags: user/app:latest
           cache-from: type=local,src=/tmp/.buildx-cache
