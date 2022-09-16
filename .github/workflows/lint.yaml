@@ -43,8 +43,8 @@ jobs:
       -
         name: docker compose up
         run: |
-          docker-compose -f .docker/compose.yaml build
-          docker-compose -f .docker/compose.yaml up -d
+          docker-compose -f .ci/compose.yaml build
+          docker-compose -f .ci/compose.yaml up -d
       -
         name: Run
         run: |
