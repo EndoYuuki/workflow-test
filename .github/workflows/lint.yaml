@@ -41,12 +41,10 @@ jobs:
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
       -
-        name: docker compose up
+        name: docker run
         run: |
-          docker-compose -f .ci/compose.yaml build
-          docker-compose -f .ci/compose.yaml up -d
+          docker run -d -it --name app user/app:latest
       -
         name: Run
         run: |
-          docker-compose -f .ci/compose.yaml ps
-          docker-compose -f .ci/compose.yaml exec -T app bach -c "echo Hello"
+          docker exec app bash -c "echo Hello"
