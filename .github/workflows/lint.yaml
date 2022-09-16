@@ -48,5 +48,5 @@ jobs:
       -
         name: Run
         run: |
-          docker-compose ps
-          docker-compose exec -T app bach -c "echo Hello"
+          docker-compose -f .ci/compose.yaml ps
+          docker-compose -f .ci/compose.yaml exec -T app bach -c "echo Hello"
