@@ -43,9 +43,10 @@ jobs:
       -
         name: docker compose up
         run: |
-          docker compose -f .ci/compose.yaml build
-          docker compose -f .ci/compose.yaml up -d
+          docker-compose -f .ci/compose.yaml build
+          docker-compose -f .ci/compose.yaml up -d
       -
         name: Run
         run: |
-          docker-compose exec bach -c "echo Hello"
+          docker ps
+          docker-compose exec app bach -c "echo Hello"
