@@ -1,4 +1,4 @@
 FROM centos:7
 
 RUN echo "hello world"
-RUN sleep 60
+RUN sleep 10
